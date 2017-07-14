@@ -7,6 +7,7 @@ var posts = require('./data').posts;
 const port = 3001;
 
 application.use(cors());
+application.use(express.static('public'));
 
 application.get('/', function(req, res) {
   res.json(posts);
@@ -19,6 +20,8 @@ application.get('/posts/:id', function(req, res) {
   res.json(posts[index]);
 });
 
+
+
 application.listen(port, function() {
-  console.log(`Server on ${port}`)
+  console.log(`Server listening on the port: ${port}`)
 });
