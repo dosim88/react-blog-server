@@ -1,20 +1,32 @@
-var express = require('express');
-var application = express();
+const express = require('express');
+const application = express();
 
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 
-var cors = require('cors');
-var posts = require('./data').posts;
+const cors = require('cors');
+const posts = require('./data').posts;
+
+const filterByPage = require('./helpers/filterByPage');
+const filterByTitle = require('./helpers/filterByTitle');
+const totalPages = require('./helpers/totalPages');
 
 const port = 3001;
+
 
 application.use(bodyParser.urlencoded({ extended: false }));
 application.use(cors());
 application.use(express.static('public'));
 
+
 application.get('/', function(req, res) {
-  res.json(posts);
+  let filteredPosts = filterByPage(posts);
+
+  res.json({
+    entries: filteredPosts,
+    currentPage: 1,
+    totalPages: totalPages(posts.length)
+  });
 });
 
 application.get('/posts/:id', function(req, res) {
@@ -33,6 +45,26 @@ application.put('/posts/:id/like', jsonParser, function(req, res) {
   res.json(posts[index]);
 });
 
+application.get('/pages/:page', jsonParser, function(req, res) {
+  const page = +req.params.page;
+  let filteredPosts = filterByPage(posts, page);
+
+  res.json({
+    entries: filteredPosts,
+    currentPage: page,
+    totalPages: totalPages(posts.length)
+  });
+});
+
+application.get('/search/', function(req, res) {
+  let filteredPosts = filterByTitle(posts, req.query);
+
+  res.json({
+    entries: filteredPosts,
+    totalPages: totalPages(posts.length)
+  });
+
+});
 
 
 application.listen(port, function() {

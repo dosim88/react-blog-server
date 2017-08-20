@@ -12,13 +12,13 @@ module.exports = {
         updatedAt: '2017-06-01',
         likesCount: 5
       },
-      text: 'post 1'
+      title: 'post 1 (Predators)'
     },
     {
       id: 1,
       image: {
         src: '/images/post-2.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Григорий Григорьевич',
@@ -26,13 +26,13 @@ module.exports = {
         updatedAt: '2017-06-02',
         likesCount: 10
       },
-      text: 'post 2'
+      title: 'post 2 (Predators)'
     },
     {
       id: 2,
       image: {
         src: '/images/post-3.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Филипп Филиппович',
@@ -40,7 +40,7 @@ module.exports = {
         updatedAt: '2017-06-03',
         likesCount: 20
       },
-      text: 'post 3'
+      title: 'post 3 (Predators)'
     },
     {
       id: 3,
@@ -54,13 +54,13 @@ module.exports = {
         updatedAt: '2017-06-04',
         likesCount: 25
       },
-      text: 'post 4'
+      title: 'post 4 (Predators)'
     },
     {
       id: 4,
       image: {
         src: '/images/post-5.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Дмитрий Дмитриевич',
@@ -68,13 +68,13 @@ module.exports = {
         updatedAt: '2017-06-05',
         likesCount: 30
       },
-      text: 'post 5'
+      title: 'post 5 (Herbivores)'
     },
     {
       id: 5,
       image: {
         src: '/images/post-6.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Евгений Евгеньевич',
@@ -82,13 +82,13 @@ module.exports = {
         updatedAt: '2017-06-06',
         likesCount: 35
       },
-      text: 'post 6'
+      title: 'post 6 (Herbivores)'
     },
     {
       id: 6,
       image: {
         src: '/images/post-7.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Валерий Валерьевич',
@@ -96,13 +96,13 @@ module.exports = {
         updatedAt: '2017-06-07',
         likesCount: 40
       },
-      text: 'post 7'
+      title: 'post 7 (Predators)'
     },
     {
       id: 7,
       image: {
         src: '/images/post-8.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Маргарита Иннокентьевна',
@@ -110,13 +110,13 @@ module.exports = {
         updatedAt: '2017-06-08',
         likesCount: 45
       },
-      text: 'post 8'
+      title: 'post 8 (Insects)'
     },
     {
       id: 8,
       image: {
         src: '/images/post-9.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Иннокентий Маргаритович',
@@ -124,13 +124,13 @@ module.exports = {
         updatedAt: '2017-06-09',
         likesCount: 50
       },
-      text: 'post 9'
+      title: 'post 9 (Insects)'
     },
     {
       id: 9,
       image: {
         src: '/images/post-10.jpg',
-        alt: 'some alt text',
+        alt: 'some alt text'
       },
       meta: {
         author: 'Сан Саныч',
@@ -138,7 +138,7 @@ module.exports = {
         updatedAt: '2017-06-10',
         likesCount: 55
       },
-      text: 'post 10'
-    },
+      title: 'post 10 (Herbivores)'
+    }
   ]
 };
